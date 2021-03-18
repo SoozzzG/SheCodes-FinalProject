@@ -149,3 +149,7 @@ form {
   color: goldenrod;
   margin-top: 10%;
 }
+
+#github-link {
+  text-align: center;
+}
