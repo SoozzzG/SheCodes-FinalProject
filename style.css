@@ -158,8 +158,11 @@ form {
   padding-top: 0;
 }
 a {
-  color: darkgrey;
+  color: lightgrey;
 }
 a:hover {
   color: white;
+}
+#name {
+  color: black;
 }
