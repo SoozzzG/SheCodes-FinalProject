@@ -152,4 +152,8 @@ form {
 
 #github-link {
   text-align: center;
+  font-size: 20px;
+  color: darkgrey;
+  text-decoration: none;
+  font-family: var(bs font sans serif);
 }
