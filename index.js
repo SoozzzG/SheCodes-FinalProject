@@ -47,6 +47,7 @@ function searchCity(city) {
 }
 
 function showTemperature(response) {
+  let iconElement =  document.querySelector("#icon")
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
@@ -57,12 +58,12 @@ function showTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#icon").innerHTML = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png';
+ iconElement.setAttribute = ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png');
 }
 
 function showPosition(position) {
   let apiKey = "5c7a71a4ec2cbbdeb5946ac58e7b7013";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemperature);
 }
 
