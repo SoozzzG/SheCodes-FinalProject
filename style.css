@@ -42,7 +42,7 @@ p {
 }
 
 img {
-  width: 96%;
+  width: 98%;
   height: 68%;
   border-radius: 5%;
   margin-left: 2%;
@@ -56,7 +56,14 @@ form {
   color: white;
   font-size: 35px;
   font-weight: bold;
-  margin: 3% 5%;
+  margin: 5% 0%;
+}
+#icon {
+  width: 75%;
+  height: 75%;
+}
+#city-search {
+  width: 45%;
 }
 
 #temp {
@@ -68,20 +75,19 @@ form {
   padding-left: 20%;
 }
 
-img {
-  line-height: 10;
-}
-
 #humidity,
 #wind,
 #description {
   font-size: 25px;
 }
 
-#celcius,
+#celsius,
 #fahrenheit {
   font-size: 25px;
   text-align: right;
+  top: -45px;
+  position: relative;
+  text-decoration: none;
 }
 
 .date-time {
@@ -94,6 +100,17 @@ img {
   font-size: 25px;
   padding-top: 10%;
   text-align: right;
+}
+
+.active {
+  color: black;
+  text-decoration: none;
+}
+
+.active:hover {
+  color: black;
+  text-decoration: none;
+  cursor: default;
 }
 
 #search-button {
