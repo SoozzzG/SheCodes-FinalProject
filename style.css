@@ -79,6 +79,7 @@ form {
 #wind,
 #description {
   font-size: 25px;
+  text-transform: capitalize;
 }
 
 #celsius,
