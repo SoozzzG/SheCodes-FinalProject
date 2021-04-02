@@ -6,22 +6,6 @@
 
 // let day = days[now.getDay()];
 
-// let months = [
-//   "January",
-//   "February",
-//   "March",
-//   "April",
-//   "May",
-//   "June",
-//   "July",
-//   "August",
-//   "September",
-//   "October",
-//   "November",
-//   "December",
-// ];
-// let month = months[now.getMonth()];
-
 // let currentDate = document.querySelector("#current-date-time");
 // currentDate.innerHTML = `${day} <br /> ${month} ${date}, ${year} <br/> ${hours}:${minutes}`;
 
@@ -47,7 +31,8 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let day = days[date.getDay()];
+  let dayDate = date.getDate();
+
   let days = [
     "Sunday",
     "Monday",
@@ -57,7 +42,25 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  return `${day} ${hours}:${minutes}`;
+  let day = days[date.getDay()];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+
+  return `${day}, ${month} ${dayDate} <br/> ${hours}:${minutes}`;
 }
 
 function showTemperature(response) {
