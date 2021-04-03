@@ -63,6 +63,131 @@ function formatDate(timestamp) {
   return `${day}, ${month} ${dayDate} <br/> ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  // let days = ["Tuesday", "Wednesday", "Thursday"];
+
+  forecastHTML =
+    forecastHTML +
+    `
+        <div class="col-2">
+          <div class="Tuesday">
+            <div class="card">
+              <div class="card-body">
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
+                <div class="weather-forecast-date">tue</div>
+                <br/>
+                <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-high">High: 34°</span>
+                  <br />
+                <span class="weather-forecast-low">Low: 13°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+
+  forecastHTML =
+    forecastHTML +
+    `
+        <div class="col-2">
+          <div class="Tuesday">
+            <div class="card">
+              <div class="card-body">
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
+                <div class="weather-forecast-date">wed</div>
+                <br/>
+                <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-high">High: 34°</span>
+                  <br />
+                <span class="weather-forecast-low">Low: 13°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+
+  forecastHTML =
+    forecastHTML +
+    `
+        <div class="col-2">
+          <div class="Tuesday">
+            <div class="card">
+              <div class="card-body">
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
+                <div class="weather-forecast-date">thu</div>
+                <br/>
+                <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-high">High: 34°</span>
+                  <br />
+                <span class="weather-forecast-low">Low: 13°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+        <div class="col-2">
+          <div class="Tuesday">
+            <div class="card">
+              <div class="card-body">
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
+                <div class="weather-forecast-date">fri</div>
+                <br/>
+                <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-high">High: 34°</span>
+                  <br />
+                <span class="weather-forecast-low">Low: 13°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+        <div class="col-2">
+          <div class="Tuesday">
+            <div class="card">
+              <div class="card-body">
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
+                <div class="weather-forecast-date">sat</div>
+                <br/>
+                <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-high">High: 34°</span>
+                  <br />
+                <span class="weather-forecast-low">Low: 13°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+        <div class="col-2">
+          <div class="Tuesday">
+            <div class="card">
+              <div class="card-body">
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
+                <div class="weather-forecast-date">sun</div>
+                <br/>
+                <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-high">High: 34°</span>
+                  <br />
+                <span class="weather-forecast-low">Low: 13°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   fahrenheitTemperature = response.data.main.temp;
   let iconElement = document.querySelector("#icon");
@@ -81,7 +206,6 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  console.log(response.data);
 }
 
 function showPosition(position) {
@@ -126,3 +250,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("New York");
+displayForecast();

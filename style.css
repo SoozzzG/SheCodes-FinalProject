@@ -145,7 +145,28 @@ form {
   color: blueviolet;
 }
 
-.Tuesday {
+.weather-forecast {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.weather-forecast-date {
+  color: rgb(21, 170, 21);
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.weather-forecast-temperatures {
+  font-size: 16px;
+  color: black;
+  margin: 0 auto;
+}
+
+.weather-forecast-low {
+  opacity: 0.6;
+}
+/* .Tuesday {
   color: rgb(31, 31, 167);
   margin-top: 10%;
 }
@@ -165,7 +186,7 @@ form {
 .Saturday {
   color: goldenrod;
   margin-top: 10%;
-}
+} */
 
 #github-link {
   text-align: center;
