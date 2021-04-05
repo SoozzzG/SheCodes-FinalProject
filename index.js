@@ -65,38 +65,26 @@ function formatDate(timestamp) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
+  let days = [
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
   let forecastHTML = `<div class="row">`;
-  // let days = ["Tuesday", "Wednesday", "Thursday"];
 
-  forecastHTML =
-    forecastHTML +
-    `
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
         <div class="col-2">
           <div class="Tuesday">
             <div class="card">
               <div class="card-body">
                 <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
-                <div class="weather-forecast-date">tue</div>
-                <br/>
-                <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-high">High: 34°</span>
-                  <br />
-                <span class="weather-forecast-low">Low: 13°</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>`;
-
-  forecastHTML =
-    forecastHTML +
-    `
-        <div class="col-2">
-          <div class="Tuesday">
-            <div class="card">
-              <div class="card-body">
-                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
-                <div class="weather-forecast-date">wed</div>
+                <div class="weather-forecast-date">${day}</div>
                 <br/>
                 <div class="weather-forecast-temperatures">
                 <span class="weather-forecast-high">High: 34°</span>
@@ -108,15 +96,15 @@ function displayForecast() {
           </div>
         </div>`;
 
-  forecastHTML =
-    forecastHTML +
-    `
+    forecastHTML =
+      forecastHTML +
+      `
         <div class="col-2">
           <div class="Tuesday">
             <div class="card">
               <div class="card-body">
                 <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
-                <div class="weather-forecast-date">thu</div>
+                <div class="weather-forecast-date">${day}</div>
                 <br/>
                 <div class="weather-forecast-temperatures">
                 <span class="weather-forecast-high">High: 34°</span>
@@ -127,15 +115,16 @@ function displayForecast() {
             </div>
           </div>
         </div>`;
-  forecastHTML =
-    forecastHTML +
-    `
+
+    forecastHTML =
+      forecastHTML +
+      `
         <div class="col-2">
           <div class="Tuesday">
             <div class="card">
               <div class="card-body">
                 <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
-                <div class="weather-forecast-date">fri</div>
+                <div class="weather-forecast-date">${day}</div>
                 <br/>
                 <div class="weather-forecast-temperatures">
                 <span class="weather-forecast-high">High: 34°</span>
@@ -146,15 +135,15 @@ function displayForecast() {
             </div>
           </div>
         </div>`;
-  forecastHTML =
-    forecastHTML +
-    `
+    forecastHTML =
+      forecastHTML +
+      `
         <div class="col-2">
           <div class="Tuesday">
             <div class="card">
               <div class="card-body">
                 <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
-                <div class="weather-forecast-date">sat</div>
+                <div class="weather-forecast-date">${day}</div>
                 <br/>
                 <div class="weather-forecast-temperatures">
                 <span class="weather-forecast-high">High: 34°</span>
@@ -165,15 +154,15 @@ function displayForecast() {
             </div>
           </div>
         </div>`;
-  forecastHTML =
-    forecastHTML +
-    `
+    forecastHTML =
+      forecastHTML +
+      `
         <div class="col-2">
           <div class="Tuesday">
             <div class="card">
               <div class="card-body">
                 <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
-                <div class="weather-forecast-date">sun</div>
+                <div class="weather-forecast-date">${day}</div>
                 <br/>
                 <div class="weather-forecast-temperatures">
                 <span class="weather-forecast-high">High: 34°</span>
@@ -184,6 +173,26 @@ function displayForecast() {
             </div>
           </div>
         </div>`;
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="Tuesday">
+            <div class="card">
+              <div class="card-body">
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="35" />
+                <div class="weather-forecast-date">${day}</div>
+                <br/>
+                <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-high">High: 34°</span>
+                  <br />
+                <span class="weather-forecast-low">Low: 13°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+  });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
