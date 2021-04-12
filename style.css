@@ -42,7 +42,7 @@ p {
   /* margin-left: 2%; */
   border-color: white;
   margin: 4px 0 0 4px;
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 1px #fff;
 }
 
 img {
