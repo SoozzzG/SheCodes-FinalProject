@@ -99,8 +99,8 @@ function displayForecast(response) {
         `
         <div class="col-2">
           <div class="Tuesday">
-            <div class="card">
-              <div class="card-body " >
+            <div class="card bg-info border-light">
+              <div class="card-body" >
                 <img src="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
                 }@2x.png" alt="" width="35" />
