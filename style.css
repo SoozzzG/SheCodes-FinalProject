@@ -83,27 +83,31 @@ form {
 #description {
   font-size: 25px;
   text-transform: capitalize;
+  text-align: left;
+  padding-right: 10%;
 }
 
-#celsius,
+/* #celsius,
 #fahrenheit {
   font-size: 25px;
   text-align: right;
   top: -45px;
   position: relative;
   text-decoration: none;
-}
+} */
 
 .date-time {
   color: white;
   font-size: 25px;
   padding-top: 10%;
+  padding-left: 10%;
 }
 .current-conditions {
   color: white;
   font-size: 25px;
   padding-top: 10%;
-  text-align: right;
+  padding-right: 10%;
+  text-align: left;
 }
 
 .active {

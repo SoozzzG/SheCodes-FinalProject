@@ -12,100 +12,99 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
-      
     <div class="container">
-    
       <div class="row mb-3">
-        <div class="col-6 card bg-info border-light">
-          <div class="card-body bg-info" >
-            <h1 id="city"></h1>
-
-            <div class="row">
-              <div class="col-6">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  id="icon"
-                />
-              </div>
-              <div class="col-6" id="current-temp">
-                <h2>
-                  <span id="temp"></span>
-                  <small>
-                    <a href="" id="fahrenheit" class="active">°F | </a>
-                    <a href="" id="celsius">°C</a>
-                  </small>
-                </h2>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <p class="date-time" id="current-date-time">
-                  Monday
-                  <br />
-                  February 15, 2020
-                  <br />
-                  14:52pm
-                </p>
-              </div>
-
-              <div class="col-5">
-                <p class="current-conditions">
-                  <span id="description"></span>
-                  <br />
-                  Humidity: <span id="humidity"></span>%
-                  <br />
-                  Wind: <span id="wind"></span>mph
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="col-6">
-          <div class="icon">
-            <img class="world"
-              src="https://www.spaceitbridge.com/wp-content/uploads/2018/04/bigstock-Sunrise-view-from-space-on-Pla-202343752-833x436.jpg"
-              alt="weather"
-            />
+          <div class="card bg-info border-light">
+            
+            <div class="card-body bg-info">
+              <h1 id="city"></h1>
+
+              <div class="row">
+                <div class="col-6">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                    id="icon"
+                  />
+                </div>
+                <div class="col-6" id="current-temp">
+                  <h2>
+                    <span id="temp"></span>
+                    <small>
+                      <a href="" id="fahrenheit" class="active">°F | </a>
+                      <a href="" id="celsius">°C</a>
+                    </small>
+                  </h2>
+                </div>
+            </div>
           </div>
+
           <div class="row">
             <div class="col">
-              <form action="New Location" id="new-location">
-                <label for="New Location"> New Location </label>
+              <p class="date-time" id="current-date-time">
+                Monday
                 <br />
-                <input
-                  type="text"
-                  placeholder="Type a city"
-                  id="city-search"
-                  name="New Location"
-                  autocomplete="on"/>
-                <button type="submit" class="button" id="search-button">
-                  👈🏽 Search
-                </button>
+                February 15, 2020
+                <br />
+                14:52pm
+              </p>
+            </div>
 
-                <button
-                  type="button"
-                  class="button"
-                  id="current-location-button"
-                >
-                  Current Location 📍
-                </button>
-              </form>
+            <div class="col-5">
+              <p class="current-conditions">
+                <span id="description"></span>
+                <br />
+                Humidity: <span id="humidity"></span>%
+                <br />
+                Wind: <span id="wind"></span>mph
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-    <div class="weather-forecast" id="forecast">
-      
-  </div>
-<!-- 
+      <div class="col-6">
+        <div class="icon">
+          <img
+            class="world"
+            src="https://www.spaceitbridge.com/wp-content/uploads/2018/04/bigstock-Sunrise-view-from-space-on-Pla-202343752-833x436.jpg"
+            alt="weather"
+          />
+        </div>
+        <div class="row">
+          <div class="col">
+            <form action="New Location" id="new-location">
+              <label for="New Location"> New Location </label>
+              <br />
+              <input
+                type="text"
+                placeholder="Type a city"
+                id="city-search"
+                name="New Location"
+                autocomplete="on"
+              />
+              <button type="submit" class="button" id="search-button">
+                👈🏽 Search
+              </button>
+
+              <button type="button" class="button" id="current-location-button">
+                Current Location 📍
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weather-forecast" id="forecast"></div>
+    <!-- 
         <div class="col">
           <div class="Wednesday">
             <div class="card">
